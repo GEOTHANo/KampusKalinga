@@ -57,7 +57,7 @@
                 
                 <button class="inline-flex items-center gap-2 px-4 py-2 border border-gray-200 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50 transition">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    Export CSV
+                    Export Report
                 </button>
             </div>
             <div class="flex">
@@ -410,6 +410,48 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- AI Suggestion -->
+                        <div class="bg-gradient-to-br from-[#f0f9ff] to-[#e0f2fe] rounded-xl p-5 border border-blue-100 shadow-inner">
+                            <div class="flex items-center gap-2 mb-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center shadow-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                </div>
+                                <h3 class="text-sm font-bold text-blue-900">AI Suggested Actions</h3>
+                            </div>
+                            <ul class="text-sm text-blue-800 space-y-2 list-disc list-inside">
+                                <li>Dispatch the nearest security personnel to the location to secure the area.</li>
+                                <li>Review CCTV footage of the incident time to identify involved parties.</li>
+                                <li>Notify Student Affairs for immediate follow-up and monitoring.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Administrator / Office Notes & Feedback -->
+                        <div class="border-t border-gray-100 pt-6 mt-2">
+                            <h3 class="text-sm font-bold text-gray-800 mb-4">Official Notes & Feedback</h3>
+                            
+                            <!-- Existing Notes -->
+                            <div class="space-y-4 mb-5">
+                                <div class="bg-gray-50 rounded-lg p-3 border border-gray-100">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="text-xs font-bold text-gray-700">Security Office</span>
+                                        <span class="text-[10px] text-gray-400">Jun 10, 2025, 11:00 AM</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600">Officers deployed. Area has been secured. Waiting for further instructions.</p>
+                                </div>
+                            </div>
+
+                            <!-- Add Note Form -->
+                            <div class="flex flex-col gap-3">
+                                <textarea class="w-full bg-[#f8f9fa] border border-gray-200 rounded-lg p-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1a6b5a] focus:border-transparent transition" rows="3" placeholder="Add your feedback, update, or resolution note here..."></textarea>
+                                <div class="flex justify-end">
+                                    <button class="bg-[#1a6b5a] hover:bg-[#145a46] text-white font-bold py-2 px-4 rounded-lg text-sm transition shadow-sm flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                        Submit Note
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Right Column: Meta Info -->
@@ -444,9 +486,6 @@
                         <div class="pt-4 mt-4 border-t border-gray-100">
                             <button class="w-full bg-[#1a6b5a] hover:bg-[#145a46] text-white font-bold py-2.5 rounded-lg text-sm transition shadow-sm">
                                 Update Status
-                            </button>
-                            <button class="w-full mt-2 bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 font-bold py-2.5 rounded-lg text-sm transition">
-                                Add Note
                             </button>
                         </div>
                     </div>

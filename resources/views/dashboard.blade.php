@@ -466,6 +466,119 @@
             </div>
         </div>
 
+        <!-- Office Dashboard -->
+        <div class="dash-office flex flex-col gap-6 font-sans">
+
+            <!-- Office Identity Banner -->
+            <div style="background: linear-gradient(to right, #1a6b5a, #145a46);" class="rounded-2xl p-6 text-white shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-bold">Security Office Dashboard</h2>
+                        <p class="text-sm text-teal-100 mt-0.5">Showing incidents and reports assigned to your office</p>
+                    </div>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/20 rounded-lg text-sm font-semibold self-start sm:self-auto">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    Active
+                </span>
+            </div>
+
+            <!-- Office Stats -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+                <!-- Total Assigned -->
+                <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+                    <div class="flex justify-between items-start">
+                        <div class="w-10 h-10 rounded-lg bg-[#1a6b5a] flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-3xl font-bold text-gray-900">14</h3>
+                        <p class="text-sm text-gray-500 mt-1 font-medium">Total Assigned</p>
+                    </div>
+                </div>
+                <!-- In Progress -->
+                <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+                    <div class="flex justify-between items-start">
+                        <div class="w-10 h-10 rounded-lg bg-yellow-50 flex items-center justify-center text-yellow-500 border border-yellow-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-3xl font-bold text-gray-900">5</h3>
+                        <p class="text-sm text-gray-500 mt-1 font-medium">In Progress</p>
+                    </div>
+                </div>
+                <!-- Resolved -->
+                <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+                    <div class="flex justify-between items-start">
+                        <div class="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center text-green-500 border border-green-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-3xl font-bold text-gray-900">9</h3>
+                        <p class="text-sm text-gray-500 mt-1 font-medium">Resolved</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Incidents for This Office -->
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+                <div class="p-5 border-b border-gray-100 flex justify-between items-center">
+                    <div>
+                        <h3 class="text-sm font-bold text-gray-800">Incidents Assigned to Your Office</h3>
+                        <p class="text-xs text-gray-400 mt-0.5">Reports that have been routed to your office for action</p>
+                    </div>
+                    <a href="{{ route('incidents') }}" class="text-xs font-bold text-[#1a6b5a] hover:text-[#145a46] flex items-center gap-1 transition">
+                        View All
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="divide-y divide-gray-100">
+                    <!-- Office Row 1 -->
+                    <div onclick="openIncidentsModal('INC-058 Details')" class="p-4 flex justify-between items-center hover:bg-gray-50/50 transition cursor-pointer">
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">Physical altercation near Gymnasium</p>
+                            <p class="text-xs text-gray-400 mt-1">Reported on Jun 10, 2025 • Building A, Gym</p>
+                        </div>
+                        <span class="inline-flex px-2.5 py-1 rounded-md text-[10px] font-bold bg-red-100/50 text-red-600 whitespace-nowrap">Open</span>
+                    </div>
+                    <!-- Office Row 2 -->
+                    <div onclick="openIncidentsModal('INC-055 Details')" class="p-4 flex justify-between items-center hover:bg-gray-50/50 transition cursor-pointer">
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">Unauthorized person spotted on campus</p>
+                            <p class="text-xs text-gray-400 mt-1">Reported on Jun 10, 2025 • Parking Lot B</p>
+                        </div>
+                        <span class="inline-flex px-2.5 py-1 rounded-md text-[10px] font-bold bg-red-100/50 text-red-600 whitespace-nowrap">Open</span>
+                    </div>
+                    <!-- Office Row 3 -->
+                    <div onclick="openIncidentsModal('INC-049 Details')" class="p-4 flex justify-between items-center hover:bg-gray-50/50 transition cursor-pointer">
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">Stranger approached students near gate</p>
+                            <p class="text-xs text-gray-400 mt-1">Reported on Jun 6, 2025 • Gate 1</p>
+                        </div>
+                        <span class="inline-flex px-2.5 py-1 rounded-md text-[10px] font-bold bg-yellow-100/50 text-yellow-600 whitespace-nowrap">In Progress</span>
+                    </div>
+                    <!-- Office Row 4 -->
+                    <div onclick="openIncidentsModal('INC-053 Details')" class="p-4 flex justify-between items-center hover:bg-gray-50/50 transition cursor-pointer">
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">Fire alarm triggered in Admin Building</p>
+                            <p class="text-xs text-gray-400 mt-1">Reported on Jun 9, 2025 • Admin Building</p>
+                        </div>
+                        <span class="inline-flex px-2.5 py-1 rounded-md text-[10px] font-bold bg-green-100/50 text-green-600 whitespace-nowrap">Resolved</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     <!-- Incidents Modal -->
     <div id="incidentsModal" class="fixed inset-0 bg-black/50 hidden z-50 flex items-center justify-center font-sans backdrop-blur-sm transition-opacity opacity-0 duration-300">
         <div class="bg-white rounded-2xl w-full max-w-2xl shadow-2xl transform scale-95 transition-transform duration-300 mx-4">

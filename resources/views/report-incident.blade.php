@@ -62,12 +62,8 @@
                             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-800">
                                 <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                             </div>
-                            <select name="location_id" class="w-full bg-[#f4f6f8] border border-gray-200 rounded-lg pl-10 pr-10 py-2.5 text-sm appearance-none focus:outline-none focus:ring-2 focus:ring-[#1a6b5a] focus:border-transparent transition text-gray-700" required>
+                            <select id="locationSelect" name="location_id" class="w-full bg-[#f4f6f8] border border-gray-200 rounded-lg pl-10 pr-10 py-2.5 text-sm appearance-none focus:outline-none focus:ring-2 focus:ring-[#1a6b5a] focus:border-transparent transition text-gray-700" required>
                                 <option value="" disabled selected>Select building / area</option>
-                                <option value="1">Gymnasium</option>
-                                <option value="2">Science Laboratory</option>
-                                <option value="3">Library</option>
-                                <option value="4">Gate 1</option>
                             </select>
                             <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-gray-800">
                                 <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
@@ -256,4 +252,34 @@
 
         </div>
     </div>
+
+    <script>
+        function populateLocations() {
+            const select = document.getElementById('locationSelect');
+            if (!select) return;
+            
+            // clear existing options except the first one
+            while (select.options.length > 1) {
+                select.remove(1);
+            }
+            
+            const stored = localStorage.getItem('kk_campus_locations');
+            if (stored) {
+                try {
+                    const locations = JSON.parse(stored);
+                    locations.forEach(loc => {
+                        const opt = document.createElement('option');
+                        opt.value = loc.id;
+                        opt.textContent = `${loc.name} (${loc.building || 'Main Campus'})`;
+                        select.appendChild(opt);
+                    });
+                } catch (e) {
+                    console.error('Failed to parse campus locations', e);
+                }
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', populateLocations);
+        document.addEventListener('livewire:navigated', populateLocations);
+    </script>
 </x-layouts::app>

@@ -4,28 +4,62 @@
 <head>
     @include('partials.head')
     <style>
-        /* Role-Based Access Control (RBAC) Simulation Styles */
-        /* Admin */
+        /* ========================================
+           Role-Based Access Control (RBAC) Styles
+           ======================================== */
+
+        /* SuperAdmin: Dashboard, Users (admin only), Analytics, Settings */
+        body.role-superadmin .nav-incidents,
+        body.role-superadmin .nav-report,
+        body.role-superadmin .nav-report-top,
+        body.role-superadmin .nav-offices,
+        body.role-superadmin .nav-map { display: none !important; }
+
+        /* Admin: Dashboard, Incidents, Users (all), Analytics, Settings */
         body.role-admin .nav-report,
         body.role-admin .nav-report-top { display: none !important; }
-        
-        /* School Personnel */
+
+        /* School Personnel: Dashboard (own reports like Student), Report Incident, Settings */
+        body.role-schoolpersonnel .nav-incidents,
         body.role-schoolpersonnel .nav-users,
+        body.role-schoolpersonnel .nav-offices,
+        body.role-schoolpersonnel .nav-map,
         body.role-schoolpersonnel .nav-analytics,
-        body.role-schoolpersonnel .nav-settings,
+        body.role-schoolpersonnel .dash-cards,
+        body.role-schoolpersonnel .dash-graphs,
         body.role-schoolpersonnel .dash-recent { display: none !important; }
 
-        /* Student */
+        /* Student: Dashboard (own reports), Report Incident */
         body.role-student .nav-incidents,
         body.role-student .nav-users,
+        body.role-student .nav-offices,
         body.role-student .nav-map,
         body.role-student .nav-analytics,
         body.role-student .dash-cards,
         body.role-student .dash-graphs,
         body.role-student .dash-recent { display: none !important; }
 
-        /* General Student Dashboard rule */
-        body:not(.role-student) .dash-student { display: none !important; }
+        /* Offices: Dashboard (office data), Incidents, Campus Location (view only), Settings */
+        body.role-office .nav-users,
+        body.role-office .nav-offices,
+        body.role-office .nav-analytics,
+        body.role-office .nav-report,
+        body.role-office .nav-report-top,
+        body.role-office .dash-cards,
+        body.role-office .dash-graphs,
+        body.role-office .dash-recent { display: none !important; }
+
+        /* Dashboard section: Student view visible for Student & School Personnel */
+        body:not(.role-student):not(.role-schoolpersonnel) .dash-student { display: none !important; }
+        /* Dashboard section: Office view */
+        body:not(.role-office) .dash-office { display: none !important; }
+
+        /* Users page: SuperAdmin sees admin-only view; others see all-users view */
+        body.role-superadmin .users-all-view { display: none !important; }
+        body:not(.role-superadmin) .superadmin-users-view { display: none !important; }
+
+        /* Campus Location: Office role cannot add locations */
+        body.role-office .campus-location-add-btn { display: none !important; }
     </style>
     <script>
         // Apply role immediately to prevent flash (runs before DOMContentLoaded)
@@ -36,7 +70,7 @@
 
         function applyRole() {
             const role = localStorage.getItem('kk_current_role') || 'superadmin';
-            document.body.classList.remove('role-superadmin', 'role-admin', 'role-schoolpersonnel', 'role-student');
+            document.body.classList.remove('role-superadmin', 'role-admin', 'role-schoolpersonnel', 'role-student', 'role-office');
             document.body.classList.add('role-' + role);
             const roleSelect = document.getElementById('roleSimulator');
             if (roleSelect) roleSelect.value = role;
@@ -47,8 +81,9 @@
                 const greetings = {
                     'superadmin':     "Welcome back, Super Admin. You have full system access.",
                     'admin':          "Welcome back, Admin. Here's the latest incident overview.",
-                    'schoolpersonnel':"Welcome back. Here's your campus incident summary.",
+                    'schoolpersonnel':"Welcome back. Here are the reports you have submitted.",
                     'student':        "Welcome back. Track the status of your submitted reports below.",
+                    'office':         "Welcome back. Here are the incidents assigned to your office.",
                 };
                 subtitle.textContent = greetings[role] || '';
             }
@@ -134,14 +169,23 @@
                     </svg>
                     <span>Users</span>
                 </a>
+                <a href="{{ route('offices') }}" class="kk-nav-item nav-offices {{ request()->routeIs('offices') ? 'active' : '' }}"
+                    wire:navigate>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="kk-nav-icon">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                    </svg>
+                    <span>Offices</span>
+                </a>
                 <a href="{{ route('campus-map') }}"
                     class="kk-nav-item nav-map {{ request()->routeIs('campus-map') ? 'active' : '' }}" wire:navigate>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="kk-nav-icon">
-                        <circle cx="12" cy="10" r="3" />
-                        <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z" />
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
                     </svg>
-                    <span>Campus Map</span>
+                    <span>Campus Location</span>
                 </a>
                 <a href="{{ route('analytics') }}"
                     class="kk-nav-item nav-analytics {{ request()->routeIs('analytics') ? 'active' : '' }}" wire:navigate>
@@ -178,8 +222,9 @@
                     <select id="roleSimulator" onchange="changeRole(this)" class="mt-1 block w-full text-[10px] py-1 px-1 border border-gray-200 rounded text-gray-600 bg-white focus:outline-none">
                         <option value="superadmin">SuperAdmin</option>
                         <option value="admin">Admin</option>
-                        <option value="schoolpersonnel">School Personel</option>
+                        <option value="schoolpersonnel">School Personnel</option>
                         <option value="student">Student</option>
+                        <option value="office">Offices</option>
                     </select>
                 </div>
                 <button type="button" onclick="window.location.href='/'" class="kk-logout-btn" title="Log out">

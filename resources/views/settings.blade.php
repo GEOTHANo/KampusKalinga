@@ -1,36 +1,8 @@
 <x-layouts::app :title="__('Settings')">
     <x-slot:subtitle>Manage system configuration and personal preferences.</x-slot:subtitle>
 
-    <div class="flex flex-col md:flex-row gap-8 font-sans pb-10 max-w-6xl">
+    <div class="flex flex-col gap-8 font-sans pb-10 max-w-4xl mx-auto">
         
-        <!-- Settings Sidebar Navigation -->
-        <div class="w-full md:w-64 flex-shrink-0">
-            <div class="flex flex-col gap-1 sticky top-6">
-                <!-- Active Item -->
-                <button class="flex items-center gap-3 px-4 py-3 bg-[#475569] text-white rounded-xl font-bold text-sm shadow-sm transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#10b981]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    Profile
-                </button>
-                <!-- Inactive Items -->
-                <button class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-100 rounded-xl font-bold text-sm transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                    Security
-                </button>
-                <button class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-100 rounded-xl font-bold text-sm transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                    Notifications
-                </button>
-                <button class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-100 rounded-xl font-bold text-sm transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
-                    AI Settings
-                </button>
-                <button class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-100 rounded-xl font-bold text-sm transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                    Campus Info
-                </button>
-            </div>
-        </div>
-
         <!-- Settings Content Area -->
         <div class="flex-1 flex flex-col gap-6">
             

@@ -31,8 +31,8 @@
             </button>
         </div>
 
-        <!-- Users Table -->
-        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+        <!-- All Users View (Hidden for SuperAdmin) -->
+        <div class="users-all-view bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
             <div class="overflow-x-auto">
                 <table class="w-full text-left text-sm">
                     <thead class="bg-[#f8f9fa] text-gray-400 font-bold uppercase tracking-wider text-[11px] border-b border-gray-200">
@@ -243,6 +243,75 @@
                     <button class="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 font-medium text-xs transition">3</button>
                     <span class="px-2 text-gray-400 text-xs">...</span>
                     <button class="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 font-medium text-xs transition">15</button>
+                    <button class="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-50 transition"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SuperAdmin Only View: Shows Only Admin Users -->
+        <div class="superadmin-users-view bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm">
+                    <thead class="bg-[#f8f9fa] text-gray-400 font-bold uppercase tracking-wider text-[11px] border-b border-gray-200">
+                        <tr>
+                            <th class="px-6 py-4 cursor-pointer hover:text-gray-600 transition group w-1/3">
+                                <div class="flex items-center gap-1.5">USER <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-300 group-hover:text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></div>
+                            </th>
+                            <th class="px-6 py-4">ROLE</th>
+                            <th class="px-6 py-4">ID NUMBER</th>
+                            <th class="px-6 py-4">DEPARTMENT</th>
+                            <th class="px-6 py-4">STATUS</th>
+                            <th class="px-6 py-4 text-right">ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        
+                        <!-- Admin User (Subscriber) -->
+                        <tr class="hover:bg-gray-50/50 transition">
+                            <td class="px-6 py-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-[#1a6b5a] text-white flex items-center justify-center font-bold text-xs flex-shrink-0">
+                                        AD
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-gray-800">Admin User</div>
+                                        <div class="text-xs text-gray-400 mt-0.5">admin@kampuskalinga.edu</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="inline-flex px-2.5 py-1 rounded-md text-[10px] font-bold bg-purple-100/50 text-purple-600 border border-purple-100">Administrator</span>
+                            </td>
+                            <td class="px-6 py-4 text-gray-500 font-medium text-xs">EMP-001</td>
+                            <td class="px-6 py-4 text-gray-500 font-medium text-xs">IT Department</td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                                    <span class="text-xs font-semibold text-gray-600">Active</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-right">
+                                <div class="flex items-center justify-end gap-2">
+                                    <button onclick="openViewUserModal(this)" class="text-gray-400 hover:text-[#1a6b5a] transition p-1" title="View User">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                    </button>
+                                    <button onclick="openEditUserModal(this)" class="text-gray-400 hover:text-[#1a6b5a] transition p-1" title="Edit User">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Pagination Footer -->
+            <div class="px-6 py-4 border-t border-gray-200 bg-white flex flex-wrap items-center justify-between gap-4">
+                <span class="text-xs text-gray-500 font-medium">Showing 1-1 of 1 user</span>
+                <div class="flex items-center gap-1">
+                    <button class="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-50 transition"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg></button>
+                    <button class="w-8 h-8 flex items-center justify-center rounded-lg bg-[#1a6b5a] text-white font-bold text-xs">1</button>
                     <button class="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-50 transition"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></button>
                 </div>
             </div>

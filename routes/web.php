@@ -10,6 +10,7 @@ Route::view('dashboard', 'dashboard')->name('dashboard');
 Route::view('incidents', 'incidents')->name('incidents');
 Route::view('report-incident', 'report-incident')->name('report-incident');
 Route::view('users', 'users')->name('users');
+Route::view('offices', 'offices')->name('offices');
 Route::view('campus-map', 'campus-map')->name('campus-map');
 Route::view('analytics', 'analytics')->name('analytics');
 Route::view('settings', 'settings')->name('settings');
