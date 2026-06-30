@@ -6,7 +6,7 @@
             <!-- Stat Card 1 -->
             <div onclick="window.location.href='/incidents'" class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm cursor-pointer hover:border-[#1a6b5a] hover:shadow-md transition">
                 <div class="flex justify-between items-start">
-                    <div class="w-10 h-10 rounded-lg bg-[#1a6b5a] flex items-center justify-center text-white">
+                    <div class="w-10 h-10 rounded-lg bg-[#1a6b5a] flex items-center justify-center text-gray-900">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                         </svg>
@@ -73,7 +73,7 @@
             <!-- Monthly Incidents Chart -->
             <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm col-span-2">
                 <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-sm font-bold text-gray-800">Monthly Incidents</h3>
+                    <h3 class="text-sm font-bold text-gray-900">Monthly Incidents</h3>
                     <div class="flex items-center gap-4 text-xs font-medium text-gray-500">
                         <div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-red-500"></span> High</div>
                         <div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-yellow-400"></span> Medium</div>
@@ -89,7 +89,7 @@
                             <div class="w-1/3 bg-yellow-400 rounded-t-sm h-12"></div>
                             <div class="w-1/3 bg-green-500 rounded-t-sm h-4"></div>
                         </div>
-                        <span class="text-xs text-gray-400 text-center mt-3">Jan</span>
+                        <span class="text-xs text-gray-500 text-center mt-3">Jan</span>
                     </div>
                     <!-- Feb -->
                     <div class="flex flex-col justify-end w-full group">
@@ -98,7 +98,7 @@
                             <div class="w-1/3 bg-yellow-400 rounded-t-sm h-8"></div>
                             <div class="w-1/3 bg-green-500 rounded-t-sm h-6"></div>
                         </div>
-                        <span class="text-xs text-gray-400 text-center mt-3">Feb</span>
+                        <span class="text-xs text-gray-500 text-center mt-3">Feb</span>
                     </div>
                     <!-- Mar -->
                     <div class="flex flex-col justify-end w-full group">
@@ -107,7 +107,7 @@
                             <div class="w-1/3 bg-yellow-400 rounded-t-sm h-14"></div>
                             <div class="w-1/3 bg-green-500 rounded-t-sm h-8"></div>
                         </div>
-                        <span class="text-xs text-gray-400 text-center mt-3">Mar</span>
+                        <span class="text-xs text-gray-500 text-center mt-3">Mar</span>
                     </div>
                     <!-- Apr -->
                     <div class="flex flex-col justify-end w-full group">
@@ -116,7 +116,7 @@
                             <div class="w-1/3 bg-yellow-400 rounded-t-sm h-10"></div>
                             <div class="w-1/3 bg-green-500 rounded-t-sm h-9"></div>
                         </div>
-                        <span class="text-xs text-gray-400 text-center mt-3">Apr</span>
+                        <span class="text-xs text-gray-500 text-center mt-3">Apr</span>
                     </div>
                     <!-- May -->
                     <div class="flex flex-col justify-end w-full group">
@@ -125,7 +125,7 @@
                             <div class="w-1/3 bg-yellow-400 rounded-t-sm h-16"></div>
                             <div class="w-1/3 bg-green-500 rounded-t-sm h-10"></div>
                         </div>
-                        <span class="text-xs text-gray-400 text-center mt-3">May</span>
+                        <span class="text-xs text-gray-500 text-center mt-3">May</span>
                     </div>
                     <!-- Jun -->
                     <div class="flex flex-col justify-end w-full group">
@@ -134,14 +134,14 @@
                             <div class="w-1/3 bg-yellow-400 rounded-t-sm h-8"></div>
                             <div class="w-1/3 bg-green-500 rounded-t-sm h-4"></div>
                         </div>
-                        <span class="text-xs text-gray-400 text-center mt-3">Jun</span>
+                        <span class="text-xs text-gray-500 text-center mt-3">Jun</span>
                     </div>
                 </div>
             </div>
 
             <!-- Priority Breakdown Chart -->
             <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm col-span-1">
-                <h3 class="text-sm font-bold text-gray-800 mb-6">Priority Breakdown</h3>
+                <h3 class="text-sm font-bold text-gray-900 mb-6">Priority Breakdown</h3>
                 <div class="flex items-center justify-between h-40">
                     <!-- Donut Chart Placeholder (CSS) -->
                     <div class="relative w-32 h-32">
@@ -185,10 +185,10 @@
                 
                 <!-- Recent Incidents Table -->
                 <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
-                    <div class="p-5 border-b border-gray-100 flex justify-between items-center">
+                    <div class="p-5 border-b border-gray-200 flex justify-between items-center">
                         <div>
-                            <h3 class="text-sm font-bold text-gray-800">Recent Incidents</h3>
-                            <p class="text-xs text-gray-400 mt-0.5">Latest 5 reports across all campuses</p>
+                            <h3 class="text-sm font-bold text-gray-900">Recent Incidents</h3>
+                            <p class="text-xs text-gray-500 mt-0.5">Latest 5 reports across all campuses</p>
                         </div>
                         <div class="flex items-center gap-3">
                             <button class="flex items-center gap-1.5 px-3 py-1.5 border border-gray-200 rounded-lg text-xs font-semibold text-gray-600 hover:bg-gray-50 transition">
@@ -204,7 +204,7 @@
                     
                     <div class="overflow-x-auto">
                         <table class="w-full text-left text-xs">
-                            <thead class="bg-gray-50/50 text-gray-400 font-semibold uppercase tracking-wider">
+                            <thead class="bg-gray-50 text-gray-500 font-semibold uppercase tracking-wider">
                                 <tr>
                                     <th class="px-5 py-3 font-semibold">ID</th>
                                     <th class="px-5 py-3 font-semibold">Incident</th>
@@ -217,11 +217,11 @@
                             </thead>
                             <tbody class="divide-y divide-gray-100">
                                 <!-- Row 1 -->
-                                <tr class="hover:bg-gray-50/50 transition">
-                                    <td class="px-5 py-4 text-gray-400 font-medium">INC-058</td>
+                                <tr class="hover:bg-gray-50 transition">
+                                    <td class="px-5 py-4 text-gray-500 font-medium">INC-058</td>
                                     <td class="px-5 py-4">
-                                        <div class="font-semibold text-gray-800">Physical altercation near Gymnasium</div>
-                                        <div class="flex items-center gap-1 text-[11px] text-gray-400 mt-1">
+                                        <div class="font-semibold text-gray-900">Physical altercation near Gymnasium</div>
+                                        <div class="flex items-center gap-1 text-[11px] text-gray-500 mt-1">
                                             <svg class="w-3 h-3 text-red-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
                                             Building A, Gym
                                         </div>
@@ -242,11 +242,11 @@
                                 </tr>
                                 
                                 <!-- Row 2 -->
-                                <tr class="hover:bg-gray-50/50 transition">
-                                    <td class="px-5 py-4 text-gray-400 font-medium">INC-057</td>
+                                <tr class="hover:bg-gray-50 transition">
+                                    <td class="px-5 py-4 text-gray-500 font-medium">INC-057</td>
                                     <td class="px-5 py-4">
-                                        <div class="font-semibold text-gray-800">Theft reported in Science Laboratory</div>
-                                        <div class="flex items-center gap-1 text-[11px] text-gray-400 mt-1">
+                                        <div class="font-semibold text-gray-900">Theft reported in Science Laboratory</div>
+                                        <div class="flex items-center gap-1 text-[11px] text-gray-500 mt-1">
                                             <svg class="w-3 h-3 text-red-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
                                             Building C, Lab 3
                                         </div>
@@ -267,11 +267,11 @@
                                 </tr>
 
                                 <!-- Row 3 -->
-                                <tr class="hover:bg-gray-50/50 transition">
-                                    <td class="px-5 py-4 text-gray-400 font-medium">INC-056</td>
+                                <tr class="hover:bg-gray-50 transition">
+                                    <td class="px-5 py-4 text-gray-500 font-medium">INC-056</td>
                                     <td class="px-5 py-4">
-                                        <div class="font-semibold text-gray-800">Broken window at Main Entrance Gate</div>
-                                        <div class="flex items-center gap-1 text-[11px] text-gray-400 mt-1">
+                                        <div class="font-semibold text-gray-900">Broken window at Main Entrance Gate</div>
+                                        <div class="flex items-center gap-1 text-[11px] text-gray-500 mt-1">
                                             <svg class="w-3 h-3 text-red-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
                                             Gate 1
                                         </div>
@@ -292,11 +292,11 @@
                                 </tr>
 
                                 <!-- Row 4 -->
-                                <tr class="hover:bg-gray-50/50 transition">
-                                    <td class="px-5 py-4 text-gray-400 font-medium">INC-055</td>
+                                <tr class="hover:bg-gray-50 transition">
+                                    <td class="px-5 py-4 text-gray-500 font-medium">INC-055</td>
                                     <td class="px-5 py-4">
-                                        <div class="font-semibold text-gray-800">Unauthorized person spotted on campus</div>
-                                        <div class="flex items-center gap-1 text-[11px] text-gray-400 mt-1">
+                                        <div class="font-semibold text-gray-900">Unauthorized person spotted on campus</div>
+                                        <div class="flex items-center gap-1 text-[11px] text-gray-500 mt-1">
                                             <svg class="w-3 h-3 text-red-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
                                             Parking Lot B
                                         </div>
@@ -317,11 +317,11 @@
                                 </tr>
 
                                 <!-- Row 5 -->
-                                <tr class="hover:bg-gray-50/50 transition">
-                                    <td class="px-5 py-4 text-gray-400 font-medium">INC-054</td>
+                                <tr class="hover:bg-gray-50 transition">
+                                    <td class="px-5 py-4 text-gray-500 font-medium">INC-054</td>
                                     <td class="px-5 py-4">
-                                        <div class="font-semibold text-gray-800">Vandalism reported on school property</div>
-                                        <div class="flex items-center gap-1 text-[11px] text-gray-400 mt-1">
+                                        <div class="font-semibold text-gray-900">Vandalism reported on school property</div>
+                                        <div class="flex items-center gap-1 text-[11px] text-gray-500 mt-1">
                                             <svg class="w-3 h-3 text-red-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
                                             Building B, Floor 2
                                         </div>
@@ -346,7 +346,7 @@
                 </div>
 
                 <!-- AI Banner -->
-                <div class="bg-[#106b5a] rounded-2xl p-5 flex items-center justify-between shadow-sm text-white">
+                <div class="bg-[#106b5a] rounded-2xl p-5 flex items-center justify-between shadow-sm text-gray-900">
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center flex-shrink-0 text-[#106b5a]">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
@@ -366,7 +366,7 @@
             <!-- Right Side (Recent Activity) -->
             <div class="col-span-1">
                 <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm h-full">
-                    <h3 class="text-sm font-bold text-gray-800 mb-6">Recent Activity</h3>
+                    <h3 class="text-sm font-bold text-gray-900 mb-6">Recent Activity</h3>
                     
                     <div class="flex flex-col gap-6">
                         <!-- Activity 1 -->
@@ -376,18 +376,18 @@
                             </div>
                             <div>
                                 <p class="text-sm text-gray-700 leading-tight">New high-priority incident reported at Library</p>
-                                <p class="text-[11px] text-gray-400 mt-1 font-medium">2 min ago</p>
+                                <p class="text-[11px] text-gray-500 mt-1 font-medium">2 min ago</p>
                             </div>
                         </div>
 
                         <!-- Activity 2 -->
                         <div class="flex gap-4">
-                            <div class="w-8 h-8 rounded-full bg-slate-700 text-white flex items-center justify-center flex-shrink-0">
+                            <div class="w-8 h-8 rounded-full bg-slate-700 text-gray-900 flex items-center justify-center flex-shrink-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
                             </div>
                             <div>
                                 <p class="text-sm text-gray-700 leading-tight">Incident INC-047 assigned to Security Team</p>
-                                <p class="text-[11px] text-gray-400 mt-1 font-medium">15 min ago</p>
+                                <p class="text-[11px] text-gray-500 mt-1 font-medium">15 min ago</p>
                             </div>
                         </div>
 
@@ -398,7 +398,7 @@
                             </div>
                             <div>
                                 <p class="text-sm text-gray-700 leading-tight">Incident INC-039 marked as Resolved</p>
-                                <p class="text-[11px] text-gray-400 mt-1 font-medium">1 hr ago</p>
+                                <p class="text-[11px] text-gray-500 mt-1 font-medium">1 hr ago</p>
                             </div>
                         </div>
 
@@ -409,18 +409,18 @@
                             </div>
                             <div>
                                 <p class="text-sm text-gray-700 leading-tight">AI re-classified INC-052 to Medium priority</p>
-                                <p class="text-[11px] text-gray-400 mt-1 font-medium">2 hr ago</p>
+                                <p class="text-[11px] text-gray-500 mt-1 font-medium">2 hr ago</p>
                             </div>
                         </div>
 
                         <!-- Activity 5 -->
                         <div class="flex gap-4">
-                            <div class="w-8 h-8 rounded-full bg-slate-700 text-white flex items-center justify-center flex-shrink-0">
+                            <div class="w-8 h-8 rounded-full bg-slate-700 text-gray-900 flex items-center justify-center flex-shrink-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                             </div>
                             <div>
                                 <p class="text-sm text-gray-700 leading-tight">New report submitted by Maria Santos</p>
-                                <p class="text-[11px] text-gray-400 mt-1 font-medium">3 hr ago</p>
+                                <p class="text-[11px] text-gray-500 mt-1 font-medium">3 hr ago</p>
                             </div>
                         </div>
                     </div>
@@ -433,31 +433,31 @@
         <div class="dash-student flex flex-col gap-6 font-sans">
             <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
                 <div class="flex justify-between items-center mb-6">
-                    <h2 class="text-lg font-bold text-gray-800">My Reported Incidents</h2>
-                    <a href="{{ route('report-incident') }}" class="bg-[#1a6b5a] text-white px-4 py-2 rounded-lg text-sm font-bold shadow-sm hover:bg-[#145a46] transition">Report New Incident</a>
+                    <h2 class="text-lg font-bold text-gray-900">My Reported Incidents</h2>
+                    <a href="{{ route('report-incident') }}" class="bg-[#1a6b5a] text-gray-900 px-4 py-2 rounded-lg text-sm font-bold shadow-sm hover:bg-[#145a46] transition">Report New Incident</a>
                 </div>
                 
                 <div class="space-y-4">
                     <!-- Student Row 1 -->
-                    <div class="p-4 border border-gray-100 rounded-xl flex justify-between items-center bg-gray-50/50 hover:bg-gray-50 transition cursor-pointer" onclick="openIncidentsModal('INC-058 Details')">
+                    <div class="p-4 border border-gray-200 rounded-xl flex justify-between items-center bg-gray-50 hover:bg-gray-50 transition cursor-pointer" onclick="openIncidentsModal('INC-058 Details')">
                         <div>
-                            <p class="font-bold text-gray-800">Physical altercation near Gymnasium</p>
+                            <p class="font-bold text-gray-900">Physical altercation near Gymnasium</p>
                             <p class="text-xs text-gray-500 mt-1">Reported on Jun 10, 2025 • Building A, Gym</p>
                         </div>
                         <span class="inline-flex px-2.5 py-1 rounded-md text-[10px] font-bold bg-red-100/50 text-red-600">Open</span>
                     </div>
                     <!-- Student Row 2 -->
-                    <div class="p-4 border border-gray-100 rounded-xl flex justify-between items-center bg-gray-50/50 hover:bg-gray-50 transition cursor-pointer">
+                    <div class="p-4 border border-gray-200 rounded-xl flex justify-between items-center bg-gray-50 hover:bg-gray-50 transition cursor-pointer">
                         <div>
-                            <p class="font-bold text-gray-800">Vandalism on 2nd Floor Men's Restroom</p>
+                            <p class="font-bold text-gray-900">Vandalism on 2nd Floor Men's Restroom</p>
                             <p class="text-xs text-gray-500 mt-1">Reported on Jun 8, 2025 • Building B</p>
                         </div>
                         <span class="inline-flex px-2.5 py-1 rounded-md text-[10px] font-bold bg-yellow-100/50 text-yellow-600">In Progress</span>
                     </div>
                     <!-- Student Row 3 -->
-                    <div class="p-4 border border-gray-100 rounded-xl flex justify-between items-center bg-gray-50/50 hover:bg-gray-50 transition cursor-pointer">
+                    <div class="p-4 border border-gray-200 rounded-xl flex justify-between items-center bg-gray-50 hover:bg-gray-50 transition cursor-pointer">
                         <div>
-                            <p class="font-bold text-gray-800">Broken Chair in Room 301</p>
+                            <p class="font-bold text-gray-900">Broken Chair in Room 301</p>
                             <p class="text-xs text-gray-500 mt-1">Reported on Jun 1, 2025 • Building C</p>
                         </div>
                         <span class="inline-flex px-2.5 py-1 rounded-md text-[10px] font-bold bg-green-100/50 text-green-600">Resolved</span>
@@ -470,7 +470,7 @@
         <div class="dash-office flex flex-col gap-6 font-sans">
 
             <!-- Office Identity Banner -->
-            <div style="background: linear-gradient(to right, #1a6b5a, #145a46);" class="rounded-2xl p-6 text-white shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div style="background: linear-gradient(to right, #1a6b5a, #145a46);" class="rounded-2xl p-6 text-gray-900 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div class="flex items-center gap-4">
                     <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -494,7 +494,7 @@
                 <!-- Total Assigned -->
                 <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
                     <div class="flex justify-between items-start">
-                        <div class="w-10 h-10 rounded-lg bg-[#1a6b5a] flex items-center justify-center text-white">
+                        <div class="w-10 h-10 rounded-lg bg-[#1a6b5a] flex items-center justify-center text-gray-900">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
                         </div>
                     </div>
@@ -531,10 +531,10 @@
 
             <!-- Recent Incidents for This Office -->
             <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
-                <div class="p-5 border-b border-gray-100 flex justify-between items-center">
+                <div class="p-5 border-b border-gray-200 flex justify-between items-center">
                     <div>
-                        <h3 class="text-sm font-bold text-gray-800">Incidents Assigned to Your Office</h3>
-                        <p class="text-xs text-gray-400 mt-0.5">Reports that have been routed to your office for action</p>
+                        <h3 class="text-sm font-bold text-gray-900">Incidents Assigned to Your Office</h3>
+                        <p class="text-xs text-gray-500 mt-0.5">Reports that have been routed to your office for action</p>
                     </div>
                     <a href="{{ route('incidents') }}" class="text-xs font-bold text-[#1a6b5a] hover:text-[#145a46] flex items-center gap-1 transition">
                         View All
@@ -543,34 +543,34 @@
                 </div>
                 <div class="divide-y divide-gray-100">
                     <!-- Office Row 1 -->
-                    <div onclick="openIncidentsModal('INC-058 Details')" class="p-4 flex justify-between items-center hover:bg-gray-50/50 transition cursor-pointer">
+                    <div onclick="openIncidentsModal('INC-058 Details')" class="p-4 flex justify-between items-center hover:bg-gray-50 transition cursor-pointer">
                         <div>
-                            <p class="font-bold text-gray-800 text-sm">Physical altercation near Gymnasium</p>
-                            <p class="text-xs text-gray-400 mt-1">Reported on Jun 10, 2025 • Building A, Gym</p>
+                            <p class="font-bold text-gray-900 text-sm">Physical altercation near Gymnasium</p>
+                            <p class="text-xs text-gray-500 mt-1">Reported on Jun 10, 2025 • Building A, Gym</p>
                         </div>
                         <span class="inline-flex px-2.5 py-1 rounded-md text-[10px] font-bold bg-red-100/50 text-red-600 whitespace-nowrap">Open</span>
                     </div>
                     <!-- Office Row 2 -->
-                    <div onclick="openIncidentsModal('INC-055 Details')" class="p-4 flex justify-between items-center hover:bg-gray-50/50 transition cursor-pointer">
+                    <div onclick="openIncidentsModal('INC-055 Details')" class="p-4 flex justify-between items-center hover:bg-gray-50 transition cursor-pointer">
                         <div>
-                            <p class="font-bold text-gray-800 text-sm">Unauthorized person spotted on campus</p>
-                            <p class="text-xs text-gray-400 mt-1">Reported on Jun 10, 2025 • Parking Lot B</p>
+                            <p class="font-bold text-gray-900 text-sm">Unauthorized person spotted on campus</p>
+                            <p class="text-xs text-gray-500 mt-1">Reported on Jun 10, 2025 • Parking Lot B</p>
                         </div>
                         <span class="inline-flex px-2.5 py-1 rounded-md text-[10px] font-bold bg-red-100/50 text-red-600 whitespace-nowrap">Open</span>
                     </div>
                     <!-- Office Row 3 -->
-                    <div onclick="openIncidentsModal('INC-049 Details')" class="p-4 flex justify-between items-center hover:bg-gray-50/50 transition cursor-pointer">
+                    <div onclick="openIncidentsModal('INC-049 Details')" class="p-4 flex justify-between items-center hover:bg-gray-50 transition cursor-pointer">
                         <div>
-                            <p class="font-bold text-gray-800 text-sm">Stranger approached students near gate</p>
-                            <p class="text-xs text-gray-400 mt-1">Reported on Jun 6, 2025 • Gate 1</p>
+                            <p class="font-bold text-gray-900 text-sm">Stranger approached students near gate</p>
+                            <p class="text-xs text-gray-500 mt-1">Reported on Jun 6, 2025 • Gate 1</p>
                         </div>
                         <span class="inline-flex px-2.5 py-1 rounded-md text-[10px] font-bold bg-yellow-100/50 text-yellow-600 whitespace-nowrap">In Progress</span>
                     </div>
                     <!-- Office Row 4 -->
-                    <div onclick="openIncidentsModal('INC-053 Details')" class="p-4 flex justify-between items-center hover:bg-gray-50/50 transition cursor-pointer">
+                    <div onclick="openIncidentsModal('INC-053 Details')" class="p-4 flex justify-between items-center hover:bg-gray-50 transition cursor-pointer">
                         <div>
-                            <p class="font-bold text-gray-800 text-sm">Fire alarm triggered in Admin Building</p>
-                            <p class="text-xs text-gray-400 mt-1">Reported on Jun 9, 2025 • Admin Building</p>
+                            <p class="font-bold text-gray-900 text-sm">Fire alarm triggered in Admin Building</p>
+                            <p class="text-xs text-gray-500 mt-1">Reported on Jun 9, 2025 • Admin Building</p>
                         </div>
                         <span class="inline-flex px-2.5 py-1 rounded-md text-[10px] font-bold bg-green-100/50 text-green-600 whitespace-nowrap">Resolved</span>
                     </div>
@@ -582,9 +582,9 @@
     <!-- Incidents Modal -->
     <div id="incidentsModal" class="fixed inset-0 bg-black/50 hidden z-50 flex items-center justify-center font-sans backdrop-blur-sm transition-opacity opacity-0 duration-300">
         <div class="bg-white rounded-2xl w-full max-w-2xl shadow-2xl transform scale-95 transition-transform duration-300 mx-4">
-            <div class="flex justify-between items-center p-6 border-b border-gray-100">
-                <h2 id="modalTitle" class="text-xl font-bold text-gray-800">Incidents</h2>
-                <button onclick="closeIncidentsModal()" class="text-gray-400 hover:text-gray-600 transition bg-gray-50 hover:bg-gray-100 p-2 rounded-full">
+            <div class="flex justify-between items-center p-6 border-b border-gray-200">
+                <h2 id="modalTitle" class="text-xl font-bold text-gray-900">Incidents</h2>
+                <button onclick="closeIncidentsModal()" class="text-gray-500 hover:text-gray-600 transition bg-gray-50 hover:bg-gray-100 p-2 rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg>
@@ -593,30 +593,30 @@
             <div class="p-6 max-h-[60vh] overflow-y-auto">
                 <div class="flex flex-col gap-4" id="modalContent">
                     <!-- Sample Modal Content (Will be dynamic in future) -->
-                    <div class="p-4 border border-gray-100 rounded-xl hover:bg-gray-50 transition cursor-pointer flex justify-between items-center">
+                    <div class="p-4 border border-gray-200 rounded-xl hover:bg-gray-50 transition cursor-pointer flex justify-between items-center">
                         <div>
-                            <p class="font-bold text-gray-800">INC-058: Physical altercation near Gymnasium</p>
+                            <p class="font-bold text-gray-900">INC-058: Physical altercation near Gymnasium</p>
                             <p class="text-xs text-gray-500 mt-1">Reported by Juan dela Cruz • Jun 10, 2025</p>
                         </div>
                         <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-red-50 text-red-600">High</span>
                     </div>
-                    <div class="p-4 border border-gray-100 rounded-xl hover:bg-gray-50 transition cursor-pointer flex justify-between items-center">
+                    <div class="p-4 border border-gray-200 rounded-xl hover:bg-gray-50 transition cursor-pointer flex justify-between items-center">
                         <div>
-                            <p class="font-bold text-gray-800">INC-057: Theft reported in Science Laboratory</p>
+                            <p class="font-bold text-gray-900">INC-057: Theft reported in Science Laboratory</p>
                             <p class="text-xs text-gray-500 mt-1">Reported by Maria Santos • Jun 10, 2025</p>
                         </div>
                         <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-yellow-50 text-yellow-600">Medium</span>
                     </div>
-                    <div class="p-4 border border-gray-100 rounded-xl hover:bg-gray-50 transition cursor-pointer flex justify-between items-center">
+                    <div class="p-4 border border-gray-200 rounded-xl hover:bg-gray-50 transition cursor-pointer flex justify-between items-center">
                         <div>
-                            <p class="font-bold text-gray-800">INC-055: Unauthorized person spotted on campus</p>
+                            <p class="font-bold text-gray-900">INC-055: Unauthorized person spotted on campus</p>
                             <p class="text-xs text-gray-500 mt-1">Reported by Ana Lim • Jun 10, 2025</p>
                         </div>
                         <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-red-50 text-red-600">High</span>
                     </div>
                 </div>
             </div>
-            <div class="p-6 border-t border-gray-100 bg-gray-50/50 rounded-b-2xl flex justify-end">
+            <div class="p-6 border-t border-gray-200 bg-gray-50 rounded-b-2xl flex justify-end">
                 <button onclick="closeIncidentsModal()" class="px-5 py-2.5 bg-white border border-gray-200 text-gray-700 rounded-lg text-sm font-bold hover:bg-gray-50 transition">Close</button>
             </div>
         </div>
@@ -649,3 +649,5 @@
         }
     </script>
 </x-layouts::app>
+
+

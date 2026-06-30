@@ -9,6 +9,7 @@ Route::view('register', 'register')->name('register');
 // Temporarily no auth middleware so we can preview the design
 Route::view('dashboard', 'dashboard')->name('dashboard');
 Route::view('incidents', 'incidents')->name('incidents');
+Route::view('incidents/{id}', 'incident-detail')->name('incident.detail');
 Route::view('report-incident', 'report-incident')->name('report-incident');
 Route::view('users', 'users')->name('users');
 Route::view('offices', 'offices')->name('offices');
